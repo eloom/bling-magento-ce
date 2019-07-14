@@ -1,7 +1,31 @@
-# Bling NFe para Magento
+# Bling NF-e para Magento
+ 
 
 ## Recursos
 
+#### Mapeamento dinâmico de NF-e de Saída
+
+- [x] geração de NF-e de saída através do painel da Loja Magento
+
+- [x] permite mapear, no painel de controle, diversos status iniciais de pedido + natureza da operação + status final de pedido
+
+- [x] envio de pedidos em lote
+
+- [x] mudança automática de status do pedido após gerar a NF-e no Bling
+
+
+#### Mapeamento dinâmico dos métodos de frete
+
+- [x] permite mapear, no painel de controle, diversas integrações logísticas, amarrando Método de Frete + Bling - Transportadora + Bling - Serviço de Frete
+
+#### Mapeamento dinâmico dos métodos de pagamento
+
+- [x] permite mapear, no painel de controle, diversas formas de pagamento, amarrando Método de Pagamento + Bling - Descrição do Pagamento
+
+- [x] os métodos de pagamento da élOOm(MercadoPago, PagSeguro, PayU e Yapay) já estão mapeados
+
+
+#### Mapeamento dinâmico de rastreamento
 
 ## Perguntas Frequentes
 
