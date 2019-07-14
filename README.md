@@ -75,6 +75,33 @@ Os projetos da élOOm utilizam o [Apache Ant](https://ant.apache.org/) para publ
 	> os arquivos .css e .js serão comprimidos automáticamente usando o [YUI Compressor](https://yui.github.io/yuicompressor/).
 	
 
+## Telas capturadas
+
+Detalhes no pedido
+
+![](docs/bling-detalhe-pedido.jpg)
+
+Configurações Gerais
+
+![](docs/bling-conf-gerais.jpg)
+
+Configurações da NF-e de saída
+
+![](docs/bling-nfe-saida.jpg)
+
+Configurações dos métodos de frete
+
+![](docs/bling-frete.jpg)
+
+Configurações dos métodos de pagamento
+
+![](docs/bling-pagamento.jpg)
+
+Configurações do rastreamento
+
+![](docs/bling-rastreamento.jpg)
+
+
 ## Release Notes
 
 ### [1.0.0] - 2018-10-03
