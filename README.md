@@ -54,7 +54,7 @@ Os projetos da élOOm utilizam o [Apache Ant](https://ant.apache.org/) para publ
 
 - integração com Intermediador de Pagamento PayU
 
-### [1.0.1] - 2019-07-14
+### [1.0.2] - 2019-07-14
 
 #### Added
 
