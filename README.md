@@ -3,6 +3,10 @@
 
 ## Recursos
 
+- [x] aba do Bling nos detalhes do pedido apresentando informações
+
+- [x] acesso ao .pdf da DANFE através do link nos detalhes do pedido
+
 #### Mapeamento dinâmico de NF-e de Saída
 
 - [x] geração de NF-e de saída através do painel da Loja Magento
@@ -26,6 +30,11 @@
 
 
 #### Mapeamento dinâmico de rastreamento
+
+- [x] preenchimento do localizador no pedido por ser feito manualmente ou automaticamente com temporizador
+
+- [x] mudança automática de status do pedido após preencher o localizador
+
 
 ## Perguntas Frequentes
 
