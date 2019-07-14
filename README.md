@@ -1,5 +1,4 @@
-# Bling ERP para Magento
-
+# Bling NFe para Magento
 
 ## Recursos
 
