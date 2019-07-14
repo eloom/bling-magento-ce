@@ -1,4 +1,4 @@
-# Bling NF-e para Magento
+# Bling NF-e para Magento CE - élOOm
  
 
 ## Recursos
