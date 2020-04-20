@@ -2,6 +2,7 @@
 
 ##eloom.licenca##
 
+
 class Eloom_Bling_Model_Service_Nfe_OutToXml extends Eloom_Bling_Model_Service_NfeToXml {
 
   /**

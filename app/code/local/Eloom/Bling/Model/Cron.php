@@ -29,6 +29,7 @@ class Eloom_Bling_Model_Cron extends Mage_Core_Model_Abstract {
 		$collection->addFieldToSelect('*');
 		$collection->addFieldToFilter('access_key', array('null' => true));
 		$collection->setOrder('entity_id', 'DESC');
+		$collection->addFieldToFilter('created_at', array('from' => strtotime('-1 day', time()), 'to' => time(), 'datetime' => true));
 		//$collection->getSelect()->limit(100);
 
 		if (!$collection->getSize()) {

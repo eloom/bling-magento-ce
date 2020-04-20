@@ -32,8 +32,8 @@ class Eloom_Bling_Model_Service_Nfe_Out extends Eloom_Bling_Model_Service_Nfe {
     }
     $xml = $this->nfeToXmlService->parseXml($this->order);
 
-    //$this->logger->info('XML enviado ao Bling');
-    //$this->logger->info($xml);
+    $this->logger->info('XML enviado ao Bling');
+    $this->logger->info($xml);
 
     /**
      * Envia a NF
