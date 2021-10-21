@@ -57,12 +57,6 @@ class Eloom_Bling_Model_Service_NfeToXml extends Mage_Core_Model_Abstract {
 			$nfe->appendChild($parcelasChild);
 		}
 
-		/**
-		 * Outras Despesas
-		 */
-		$despesas = $this->appendOutrasDespesas($nfe);
-		$nfe->appendChild($despesas);
-
 		$this->dom->appendChild($nfe);
 
 		return trim($this->dom->saveXML());
@@ -249,7 +243,8 @@ class Eloom_Bling_Model_Service_NfeToXml extends Mage_Core_Model_Abstract {
 			$cliente->appendChild($this->dom->createElement('cep', $address->getPostcode()));
 		}
 
-//$cliente->appendChild($this->dom->createElement('fone', ));
+        $telephone = preg_replace('/\D/', '', $address->getTelephone());
+        $cliente->appendChild($this->dom->createElement('fone', $telephone));
 		$cliente->appendChild($this->dom->createElement('email', $this->order->getCustomerEmail()));
 
 		return $cliente;
@@ -265,7 +260,6 @@ class Eloom_Bling_Model_Service_NfeToXml extends Mage_Core_Model_Abstract {
 			$qtd = $orderItem->getQtyOrdered();
 			$basePrice = round($orderItem->getBasePrice(), 2);
 			if (!empty($qtd) && $basePrice > 0) {
-
 				$name = $orderItem->getName();
 				if ($orderItem->getProductType() == 'configurable') {
 					$options = unserialize($orderItem->getData('product_options'));
@@ -301,6 +295,25 @@ class Eloom_Bling_Model_Service_NfeToXml extends Mage_Core_Model_Abstract {
 				$itens->appendChild($item);
 			}
 		}
+
+
+        /**
+         * Gift Wrap AH
+         */
+        if ($this->order->getBaseAwGiftwrapAmount()) {
+            $item = $itens->appendChild($this->dom->createElement('item'));
+            $item->appendChild($this->dom->createElement('codigo', 'GIFTWRAP'));
+            $item->appendChild($this->dom->createElement('descricao', 'Embalagem especial'));
+            $item->appendChild($this->dom->createElement('un', 'UN'));
+            $item->appendChild($this->dom->createElement('class_fiscal', '48195000'));
+            $item->appendChild($this->dom->createElement('origem', '0'));
+
+            $item->appendChild($this->dom->createElement('qtde', 1));
+            $item->appendChild($this->dom->createElement('vlr_unit', $this->order->getAwGiftwrapAmount()));
+            $item->appendChild($this->dom->createElement('tipo', 'P'));
+
+            $itens->appendChild($item);
+        }
 
 		return $itens;
 	}
